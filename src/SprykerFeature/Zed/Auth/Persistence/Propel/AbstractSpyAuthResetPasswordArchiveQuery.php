@@ -5,7 +5,7 @@
 
 namespace SprykerFeature\Zed\Auth\Persistence\Propel;
 
-use SprykerFeature\Zed\Auth\Persistence\Propel\Base\SpyAuthResetPasswordArchiveQuery as BaseSpyAuthResetPasswordArchiveQuery;
+use Orm\Zed\Auth\Persistence\Base\SpyAuthResetPasswordArchiveQuery as BaseSpyAuthResetPasswordArchiveQuery;
 
 /**
  * Skeleton subclass for performing query and update operations on the 'spy_auth_reset_password_archive' table.
@@ -17,7 +17,7 @@ use SprykerFeature\Zed\Auth\Persistence\Propel\Base\SpyAuthResetPasswordArchiveQ
  * long as it does not already exist in the output directory.
  *
  */
-class SpyAuthResetPasswordArchiveQuery extends BaseSpyAuthResetPasswordArchiveQuery
+abstract class AbstractSpyAuthResetPasswordArchiveQuery extends BaseSpyAuthResetPasswordArchiveQuery
 {
 
 } // SpyAuthResetPasswordArchiveQuery
