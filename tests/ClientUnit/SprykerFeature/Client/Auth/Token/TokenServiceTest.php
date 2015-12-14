@@ -4,9 +4,9 @@
  * (c) Spryker Systems GmbH copyright protected
  */
 
-namespace ClientUnit\SprykerFeature\Client\Auth\Service\Token;
+namespace ClientUnit\SprykerFeature\Client\Auth\Token;
 
-use SprykerFeature\Client\Auth\Service\Token\TokenService;
+use SprykerFeature\Client\Auth\Token\TokenService;
 
 /**
  * @group SprykerFeature

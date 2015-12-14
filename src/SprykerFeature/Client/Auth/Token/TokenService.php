@@ -4,7 +4,7 @@
  * (c) Spryker Systems GmbH copyright protected
  */
 
-namespace SprykerFeature\Client\Auth\Service\Token;
+namespace SprykerFeature\Client\Auth\Token;
 
 class TokenService implements TokenServiceInterface
 {

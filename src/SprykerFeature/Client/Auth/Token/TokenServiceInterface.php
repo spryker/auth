@@ -4,9 +4,9 @@
  * (c) Spryker Systems GmbH copyright protected
  */
 
-namespace SprykerFeature\Client\Auth\Service;
+namespace SprykerFeature\Client\Auth\Token;
 
-interface AuthClientInterface
+interface TokenServiceInterface
 {
 
     /**
@@ -14,7 +14,7 @@ interface AuthClientInterface
      *
      * @return string
      */
-    public function generateToken($rawToken);
+    public function generate($rawToken);
 
     /**
      * @param $rawToken
@@ -22,6 +22,6 @@ interface AuthClientInterface
      *
      * @return bool
      */
-    public function checkToken($rawToken, $token);
+    public function check($rawToken, $token);
 
 }
