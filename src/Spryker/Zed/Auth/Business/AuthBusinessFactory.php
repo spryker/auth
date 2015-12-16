@@ -18,7 +18,7 @@ use Spryker\Zed\Auth\Persistence\AuthQueryContainer;
  * @method AuthConfig getConfig()
  * @method AuthQueryContainer getQueryContainer()
  */
-class AuthDependencyContainer extends AbstractBusinessFactory
+class AuthBusinessFactory extends AbstractBusinessFactory
 {
 
     /**

@@ -17,7 +17,7 @@ use Spryker\Zed\Auth\AuthConfig;
 /**
  * @method AuthConfig getConfig()
  */
-class AuthDependencyContainer extends AbstractCommunicationFactory
+class AuthCommunicationFactory extends AbstractCommunicationFactory
 {
 
     /**
