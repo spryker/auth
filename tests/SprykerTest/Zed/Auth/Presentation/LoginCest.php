@@ -5,17 +5,19 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Acceptance\Auth\Login\Zed;
+namespace SprykerTest\Zed\Auth\Presentation;
 
-use Acceptance\Auth\Login\Zed\PageObject\LoginPage;
-use Acceptance\Auth\Login\Zed\Tester\LoginTester;
+use SprykerTest\Zed\Auth\AuthPresentationTester;
+use SprykerTest\Zed\Auth\PageObject\LoginPage;
 
 /**
- * @group Acceptance
- * @group Auth
- * @group Login
+ * Auto-generated group annotations
+ * @group SprykerTest
  * @group Zed
+ * @group Auth
+ * @group Presentation
  * @group LoginCest
+ * Add your own group annotations below this line
  */
 class LoginCest
 {
@@ -23,11 +25,11 @@ class LoginCest
     /**
      * @group positive
      *
-     * @param \Acceptance\Auth\Login\Zed\Tester\LoginTester $i
+     * @param \SprykerTest\Zed\Auth\AuthPresentationTester $i
      *
      * @return void
      */
-    public function testLoginWithValidCredentialsShouldRedirectToHomepage(LoginTester $i)
+    public function testLoginWithValidCredentialsShouldRedirectToHomepage(AuthPresentationTester $i)
     {
         $i->wantTo('Login the system');
         $i->amGoingTo('try to login with an NON valid NAME');
@@ -40,11 +42,11 @@ class LoginCest
     /**
      * @group negative
      *
-     * @param \Acceptance\Auth\Login\Zed\Tester\LoginTester $i
+     * @param \SprykerTest\Zed\Auth\AuthPresentationTester $i
      *
      * @return void
      */
-    public function testLoginWithInvalidUsernameShouldShowErrorMessage(LoginTester $i)
+    public function testLoginWithInvalidUsernameShouldShowErrorMessage(AuthPresentationTester $i)
     {
         $i->wantTo('Login the system');
         $i->amGoingTo('try to login with an invalid username');
@@ -63,11 +65,11 @@ class LoginCest
     /**
      * @group negative
      *
-     * @param \Acceptance\Auth\Login\Zed\Tester\LoginTester $i
+     * @param \SprykerTest\Zed\Auth\AuthPresentationTester $i
      *
      * @return void
      */
-    public function testLoginWithInvalidPasswordShouldShowErrorMessage(LoginTester $i)
+    public function testLoginWithInvalidPasswordShouldShowErrorMessage(AuthPresentationTester $i)
     {
         $i->wantTo('Login the system');
         $i->amGoingTo('try to log in with an invalid password');
@@ -86,11 +88,11 @@ class LoginCest
     /**
      * @group negative
      *
-     * @param \Acceptance\Auth\Login\Zed\Tester\LoginTester $i
+     * @param \SprykerTest\Zed\Auth\AuthPresentationTester $i
      *
      * @return void
      */
-    public function testLoginWithoutUsernameShouldShowErrorMessageInFom(LoginTester $i)
+    public function testLoginWithoutUsernameShouldShowErrorMessageInFom(AuthPresentationTester $i)
     {
         $i->wantTo('Login the system');
         $i->amGoingTo('try to log in without username');
@@ -103,11 +105,11 @@ class LoginCest
     /**
      * @group negative
      *
-     * @param \Acceptance\Auth\Login\Zed\Tester\LoginTester $i
+     * @param \SprykerTest\Zed\Auth\AuthPresentationTester $i
      *
      * @return void
      */
-    public function testLoginWithoutPasswordShouldShowErrorMessageInFom(LoginTester $i)
+    public function testLoginWithoutPasswordShouldShowErrorMessageInFom(AuthPresentationTester $i)
     {
         $i->wantTo('Login the system');
         $i->amGoingTo('try to log in without password');

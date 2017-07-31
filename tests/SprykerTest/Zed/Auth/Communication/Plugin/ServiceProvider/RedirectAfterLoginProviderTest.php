@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Unit\Spryker\Zed\Auth\Communication\Plugin\ServiceProvider;
+namespace SprykerTest\Zed\Auth\Communication\Plugin\ServiceProvider;
 
 use PHPUnit_Framework_TestCase;
 use Spryker\Zed\Auth\AuthConfig;
@@ -16,14 +16,15 @@ use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
- * @group Unit
- * @group Spryker
+ * Auto-generated group annotations
+ * @group SprykerTest
  * @group Zed
  * @group Auth
  * @group Communication
  * @group Plugin
  * @group ServiceProvider
  * @group RedirectAfterLoginProviderTest
+ * Add your own group annotations below this line
  */
 class RedirectAfterLoginProviderTest extends PHPUnit_Framework_TestCase
 {

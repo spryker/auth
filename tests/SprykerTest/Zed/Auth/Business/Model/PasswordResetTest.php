@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Unit\Spryker\Zed\Auth\Business\Model;
+namespace SprykerTest\Zed\Auth\Business\Model;
 
 use Generated\Shared\Transfer\UserTransfer;
 use PHPUnit_Framework_TestCase;
@@ -16,13 +16,14 @@ use Spryker\Zed\Auth\Persistence\AuthQueryContainer;
 use Spryker\Zed\User\Business\UserFacade;
 
 /**
- * @group Unit
- * @group Spryker
+ * Auto-generated group annotations
+ * @group SprykerTest
  * @group Zed
  * @group Auth
  * @group Business
  * @group Model
  * @group PasswordResetTest
+ * Add your own group annotations below this line
  */
 class PasswordResetTest extends PHPUnit_Framework_TestCase
 {

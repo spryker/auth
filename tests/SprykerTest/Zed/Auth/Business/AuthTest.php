@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Functional\Spryker\Zed\Auth;
+namespace SprykerTest\Zed\Auth\Business;
 
 use Codeception\Test\Unit;
 use Spryker\Client\Session\SessionClient;
@@ -14,15 +14,17 @@ use Spryker\Shared\Config\Config;
 use Spryker\Zed\Auth\AuthConfig;
 use Spryker\Zed\Auth\Business\AuthFacade;
 use Spryker\Zed\Auth\Business\Client\StaticToken;
-use Spryker\Zed\Kernel\Communication\Plugin\Pimple;
 use Spryker\Zed\User\Business\UserFacade;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
- * @group Functional
- * @group Spryker
+ * Auto-generated group annotations
+ * @group SprykerTest
  * @group Zed
  * @group Auth
+ * @group Business
  * @group AuthTest
+ * Add your own group annotations below this line
  */
 class AuthTest extends Unit
 {
@@ -45,12 +47,7 @@ class AuthTest extends Unit
         parent::setUp();
 
         $sessionClient = new SessionClient();
-        $pimple = new Pimple();
-        $application = $pimple->getApplication();
-        $application['session.test'] = true;
-
-        $sessionContainer = $application['session'];
-        $sessionClient->setContainer($sessionContainer);
+        $sessionClient->setContainer(new Session());
 
         $this->userFacade = new UserFacade();
         $this->authFacade = new AuthFacade();

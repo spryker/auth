@@ -1,5 +1,5 @@
 <?php
-namespace Auth;
+namespace SprykerTest\Zed\Auth;
 
 use Codeception\Actor;
 
@@ -14,14 +14,14 @@ use Codeception\Actor;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = null)
+ * @method \Codeception\Lib\Friend haveFriend($name, $actorClass = NULL)
  *
  * @SuppressWarnings(PHPMD)
  */
-class FunctionalTester extends Actor
+class AuthBusinessTester extends Actor
 {
 
-    use _generated\FunctionalTesterActions;
+    use _generated\AuthBusinessTesterActions;
 
    /**
     * Define custom actions here

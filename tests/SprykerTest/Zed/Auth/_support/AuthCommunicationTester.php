@@ -1,5 +1,5 @@
 <?php
-namespace Auth;
+namespace SprykerTest\Zed\Auth;
 
 use Codeception\Actor;
 
@@ -18,10 +18,10 @@ use Codeception\Actor;
  *
  * @SuppressWarnings(PHPMD)
  */
-class AcceptanceTester extends Actor
+class AuthCommunicationTester extends Actor
 {
 
-    use _generated\AcceptanceTesterActions;
+    use _generated\AuthCommunicationTesterActions;
 
    /**
     * Define custom actions here

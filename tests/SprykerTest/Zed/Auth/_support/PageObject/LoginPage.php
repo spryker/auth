@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Acceptance\Auth\Login\Zed\PageObject;
+namespace SprykerTest\Zed\Auth\PageObject;
 
 class LoginPage
 {

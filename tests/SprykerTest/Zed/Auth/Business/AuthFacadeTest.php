@@ -15,12 +15,15 @@ use Orm\Zed\User\Persistence\SpyUser;
 use Spryker\Zed\Auth\Business\AuthFacade;
 
 /**
+ * Auto-generated group annotations
  * @group Functional
  * @group Spryker
  * @group Zed
  * @group Auth
  * @group Business
+ * @group Facade
  * @group AuthFacadeTest
+ * Add your own group annotations below this line
  */
 class AuthFacadeTest extends Unit
 {
