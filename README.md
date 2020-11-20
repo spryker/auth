@@ -6,6 +6,11 @@ Auth is part of the Store Administration Functionality and is used for managing 
 
 **DEPRECATED - This module is not continued at this point.**
 
+**The replacements:**
+- spryker/security
+- spryker/security-gui
+- spryker/security-system-user
+
 ## Installation
 
 ```
