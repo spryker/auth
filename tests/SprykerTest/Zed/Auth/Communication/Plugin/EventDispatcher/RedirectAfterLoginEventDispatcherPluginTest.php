@@ -39,6 +39,7 @@ class RedirectAfterLoginEventDispatcherPluginTest extends Unit
     protected const REQUEST_URI = 'REQUEST_URI';
     protected const REDIRECT_URL_VALID = '/valid-redirect-url?query=string';
     protected const REDIRECT_URL_INVALID = 'http://foo/redirect-url?query=string';
+    protected const REDIRECT_URL_INVALID_WITHOUT_HTTP = '/\example.com:8080?query=string';
 
     /**
      * @return void
@@ -133,6 +134,32 @@ class RedirectAfterLoginEventDispatcherPluginTest extends Unit
 
         $event = $this->dispatchEvent($event, $redirectAfterLoginEventDispatcherPlugin);
 
+        $this->assertSame('/', $event->getResponse()->headers->get('location'));
+    }
+
+    /**
+     * @return void
+     */
+    public function testOnKernelResponseShouldNotUseInvalidRefererWithoutHttp(): void
+    {
+        // Arrange
+        $kernel = $this->getHttpKernel();
+
+        $request = new Request();
+        $request->server->set(static::REQUEST_URI, AuthConfig::DEFAULT_URL_LOGIN);
+        $request->query->set(static::REFERER,  static::REDIRECT_URL_INVALID_WITHOUT_HTTP);
+        $response = new RedirectResponse(AuthConfig::DEFAULT_URL_REDIRECT);
+        $event = new ResponseEvent($kernel, $request, HttpKernelInterface::MASTER_REQUEST, $response);
+
+        // Act
+        $redirectAfterLoginEventDispatcherPlugin = $this->getRedirectAfterLoginEventDispatcherPlugin(['isAuthenticated']);
+        $redirectAfterLoginEventDispatcherPlugin->expects($this->once())
+            ->method('isAuthenticated')
+            ->willReturn(true);
+
+        $event = $this->dispatchEvent($event, $redirectAfterLoginEventDispatcherPlugin);
+
+        // Assert
         $this->assertSame('/', $event->getResponse()->headers->get('location'));
     }
 
