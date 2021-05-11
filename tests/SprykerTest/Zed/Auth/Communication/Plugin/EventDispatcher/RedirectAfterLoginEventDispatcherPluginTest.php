@@ -142,6 +142,7 @@ class RedirectAfterLoginEventDispatcherPluginTest extends Unit
      */
     public function testOnKernelResponseShouldNotUseInvalidRefererWithoutHttp(): void
     {
+        // Arrange
         $kernel = $this->getHttpKernel();
 
         $request = new Request();
@@ -150,6 +151,7 @@ class RedirectAfterLoginEventDispatcherPluginTest extends Unit
         $response = new RedirectResponse(AuthConfig::DEFAULT_URL_REDIRECT);
         $event = new ResponseEvent($kernel, $request, HttpKernelInterface::MASTER_REQUEST, $response);
 
+        // Act
         $redirectAfterLoginEventDispatcherPlugin = $this->getRedirectAfterLoginEventDispatcherPlugin(['isAuthenticated']);
         $redirectAfterLoginEventDispatcherPlugin->expects($this->once())
             ->method('isAuthenticated')
@@ -157,6 +159,7 @@ class RedirectAfterLoginEventDispatcherPluginTest extends Unit
 
         $event = $this->dispatchEvent($event, $redirectAfterLoginEventDispatcherPlugin);
 
+        // Assert
         $this->assertSame('/', $event->getResponse()->headers->get('location'));
     }
 
