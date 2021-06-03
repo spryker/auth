@@ -151,7 +151,7 @@ class RedirectAfterLoginProvider extends AbstractPlugin implements ServiceProvid
             return null;
         }
 
-        if (substr($url, 0, 1) !== '/' || substr($url, 0, 2) === '//') {
+        if (substr($url, 0, 1) !== '/' || substr($url, 0, 2) === '//' || strpos($url, '\\') !== false) {
             return null;
         }
 
